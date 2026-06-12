@@ -1,8 +1,9 @@
 import './styles/index.css';
 import { initCursorTrail } from './lib/CursorTrail';
 import { createHero } from './components/Hero';
-import { createAutomation } from './components/Automation';
+import { createAutomation } from './components/ uma-right-0'; // Asegúrate que el nombre del archivo sea Automation.js
 import { createVideoShowcase } from './components/VideoShowcase';
+import { createYouTubeSection } from './components/YouTubeSection';
 import { createContentWriting } from './components/ContentWriting';
 import { createExpertise } from './components/Expertise';
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${createHero()}
             ${createAutomation()}
             ${createVideoShowcase()}
+            ${createYouTubeSection()}
             ${createContentWriting()}
             ${createExpertise()}
             <footer class="py-12 text-center text-brand-textSecondary text-sm border-t border-white/5 relative z-10 bg-brand-bg">
