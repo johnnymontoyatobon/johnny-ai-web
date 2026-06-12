@@ -2,12 +2,10 @@
 export function createHero() {
     return `
     <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20">
-        <!-- Background Decorative Glows -->
         <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-accentBlue/10 blur-[120px] animate-float pointer-events-none"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-brand-accentPurple/10 blur-[120px] animate-float pointer-events-none" style="animation-delay: -3s"></div>
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
-            <!-- Left Column: Copy -->
             <div class="lg:col-span-6 text-center lg:text-left space-y-8">
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-accentBlue/10 border border-brand-accentBlue/20 rounded-full text-xs font-medium text-brand-accentBlue">
                     <span class="relative flex h-2 w-2">
@@ -38,9 +36,7 @@ export function createHero() {
                 </div>
             </div>
 
-            <!-- Right Column: 3D & Photo Integration -->
             <div class="lg:col-span-6 relative flex items-center justify-center min-h-[500px]">
-                <!-- Spline Viewer Placeholder -->
                 <div class="absolute inset-0 z-0 flex items-center justify-center">
                     <spline-viewer 
                         url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" 
@@ -49,7 +45,6 @@ export function createHero() {
                     </spline-viewer>
                 </div>
 
-                <!-- Johnny's Photo Floating Card -->
                 <div class="relative z-20 w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 ease-out glass p-2 group">
                     <img 
                         src="/assets/johnnyia1.png" 
