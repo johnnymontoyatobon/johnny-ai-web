@@ -1,10 +1,20 @@
 export function createContentWriting() {
     const docs = [
-        { title: "Bienestar Emocional", file: "/assets/Bienestar Emocional.png", type: "img" },
-        { title: "Bienestar Total", file: "/assets/BIENESTAR TOTAL (1).png", type: "img" },
-        { title: "Guía de Bienestar", file: "/assets/Bienestar-Emocional.pdf", type: "pdf" },
-        { title: "Compañía Total", file: "/assets/Compania-total.pdf", type: "pdf" },
-        { title: "Control Total", file: "/assets/Control-total.png", type: "img" },
+        {
+            title: "Bienestar Emocional",
+            file: "https://res.cloudinary.com/dbdte9tsr/image/upload/v1781304802/Bienestar_Emocional_u2kt6m.png",
+            desc: "Exploring the psychology of emotional balance and mental health."
+        },
+        {
+            title: "Bienestar Total",
+            file: "https://res.cloudinary.com/dbdte9tsr/image/upload/v1781304870/BIENESTAR_TOTAL_1_hu7zli.png",
+            desc: "A holistic approach to total wellness and peak performance."
+        },
+        {
+            title: "Control Total",
+            file: "https://res.cloudinary.com/dbdte9tsr/image/upload/v1781304904/Control_total_jzhnla.png",
+            desc: "Mastering the art of self-discipline and cognitive control."
+        },
     ];
 
     return `
@@ -18,15 +28,16 @@ export function createContentWriting() {
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 ${docs.map(doc => `
                     <div class="group relative rounded-3xl overflow-hidden glass border border-white/10 p-4 hover:border-brand-accentPurple/50 transition-all duration-500">
-                        ${doc.type === 'img'
-                            ? `<img src="${doc.file}" class="w-full h-48 object-cover rounded-2xl mb-4" />`
-                            : `<div class="w-full h-48 flex items-center justify-center bg-brand-bg rounded-2xl mb-4 border border-white/5">
-                                <svg class="w-12 h-12 text-brand-accentPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                               </div>`
-                        }
-                        <div class="text-center">
-                            <h4 class="font-bold text-brand-textPrimary">${doc.title}</h4>
-                            <a href="${doc.file}" target="_blank" class="text-xs text-brand-accentPurple hover:underline">View Document &rarr;</a>
+                        <div class="relative overflow-hidden rounded-2xl mb-4">
+                            <img src="${doc.file}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="${doc.title}" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-60"></div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <h4 class="font-bold text-brand-textPrimary text-xl mb-2">${doc.title}</h4>
+                            <p class="text-brand-textSecondary text-xs font-light mb-4 px-2">${doc.desc}</p>
+                            <a href="${doc.file}" target="_blank" class="inline-block px-6 py-2 glass rounded-full text-xs text-brand-accentPurple font-bold hover:bg-brand-accentPurple hover:text-white transition-all">
+                                View Masterpiece &rarr;
+                            </a>
                         </div>
                     </div>
                 `).join('')}
