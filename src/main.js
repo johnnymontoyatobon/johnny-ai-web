@@ -1,7 +1,7 @@
 import './styles/index.css';
 import { initCursorTrail } from './lib/CursorTrail';
 import { createHero } from './components/Hero';
-import { createAutomation } from './components/ uma-right-0'; // Asegúrate que el nombre del archivo sea Automation.js
+import { createAutomation } from './components/Automation';
 import { createVideoShowcase } from './components/VideoShowcase';
 import { createYouTubeSection } from './components/YouTubeSection';
 import { createContentWriting } from './components/ContentWriting';
